@@ -1,3 +1,5 @@
+// based on ThetaShaderPack_20150926 (http://stereoarts.jp/) written by Nora.
+
 #version 400
 
 #define PI 3.14159265358979
