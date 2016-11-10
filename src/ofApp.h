@@ -1,7 +1,15 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxGui.h"
+#include "ofxDeckLink.h"
+#include "ofxImGui.h"
+#include "ofxJSON.h"
+
+struct CameraParams{
+    float radius[2];
+    ofVec2f centerPos[2];
+    float rotate[2];
+};
 
 class ofApp : public ofBaseApp{
 
@@ -9,6 +17,10 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+        void loadShader();
+        void drawGui();
+        void loadJSON();
+        void saveJSON();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -22,16 +34,21 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-    ofVideoGrabber theta;
-    vector<ofVideoDevice> devices;
-    ofShader shader;
-    ofFbo fbo;
-    ofEasyCam cam;
-    ofVboMesh sphere;
+    ofxDeckLinkAPI::Input bmdInput;
+    ofxImGui gui;
+    ofxJSONElement json;
     
-    ofParameter<ofVec4f> offset;
-    ofParameter<float> radius;
-    ofParameter<bool> showSphere;
-    ofParameterGroup thetaParams;
-    ofxPanel gui;
+    ofShader shader;
+    ofFbo srcFbo, dstFbo;
+    ofEasyCam easyCam;
+    bool enableCamControl = true;
+    ofVboMesh sphereMesh;
+    
+    int appMode = 1;
+    int guiMode = 0;
+    
+    CameraParams camera[2];
+    float blendingRatio = 0.99;
+    float translate = 0.0;
+    const ofVec2f resolution = ofVec2f(1920, 960);
 };
