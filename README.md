@@ -1,22 +1,26 @@
-# thetaRealtimeEquirectangular
+# oF-thetaEquirectangular
 
 This openFrameworks example convert the dual fish-eye images from RICOH THETA S to panorama images on realtime.
 
-Equirectangular shaders are based on ThetaShaderPack_20150926(http://stereoarts.jp/) by Nora.
+Equirectangular shaders are based on http://qiita.com/zinziroge/items/3676b4e0f7715fa60336 by zinziroge.
 
-tested on oF0.9.0 / OSX 10.11
+tested on oF0.9.7
 
-Shaders included this example are written in #version 400.
+# Dependence
+
+ofxImGui(https://github.com/jvcleave/ofxImGui)
+
+ofxJSON(https://github.com/jefftimesten/ofxJSON)
+
+ofxDeckLink(https://github.com/hanasaan/ofxDeckLink)
 
 -
 
 RICOH THETA Sから取得したイメージを、openFrameworks上でリアルタイムにパノラマ画像に変換するサンプルです。
 
-Nora氏のThetaShaderPack_20150926( http://stereoarts.jp/ )を元に作成しました。
+zinziroge氏の記事(http://qiita.com/zinziroge/items/3676b4e0f7715fa60336)を元にシェーダーを作成しました。
 
-oF0.9.0 / OSX 10.11で動作確認を行っています。
-
-シェーダーのヴァージョンは400です。
+oF0.9.7で動作確認を行っています。
 
 -
 
