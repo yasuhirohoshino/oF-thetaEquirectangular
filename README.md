@@ -8,15 +8,15 @@ tested on oF0.9.7
 
 # Dependence
 
-GUI
+### GUI
 
 ofxImGui(https://github.com/jvcleave/ofxImGui)
 
-JSON serialize
+### JSON serialize
 
 ofxJSON(https://github.com/jefftimesten/ofxJSON)
 
-video input from Blackmagic Design device
+### video input from Blackmagic Design's device
 
 ofxDeckLink(https://github.com/hanasaan/ofxDeckLink)
 
@@ -24,23 +24,21 @@ ofxDeckLink(https://github.com/hanasaan/ofxDeckLink)
 
 RICOH THETA Sから取得したイメージを、openFrameworks上でリアルタイムにパノラマ画像に変換するサンプルです。
 
-zinziroge氏の記事(http://qiita.com/zinziroge/items/3676b4e0f7715fa60336)を元にシェーダーを作成しました。
+zinziroge氏の記事(http://qiita.com/zinziroge/items/3676b4e0f7715fa60336) を元にシェーダーを作成しました。
 
 oF0.9.7で動作確認を行っています。
 
--
-
 # 依存Addons
 
-GUI
+### GUI
 
 ofxImGui(https://github.com/jvcleave/ofxImGui)
 
-JSONシリアライズ
+### JSONシリアライズ
 
 ofxJSON(https://github.com/jefftimesten/ofxJSON)
 
-Blackmagic Designの映像キャプチャ機器からの映像入力
+### Blackmagic Designの映像キャプチャ機器からの映像入力
 
 ofxDeckLink(https://github.com/hanasaan/ofxDeckLink)
 
